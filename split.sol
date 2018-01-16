@@ -1,8 +1,8 @@
 pragma solidity ^0.4.19;
 
 contract Split {
-    address constant public dev = 0x00522e276908428C02457d8a8747b9aA0AB52570;
-    address constant public community = 0x46739B691C011530AAf480AAcd339C206a2046E6;
+    address constant public dev = 0xe9C2d958E6234c862b4AfBD75b2fd241E9556303;
+    address constant public community = 0xA2C7779077Edc618C926AB5BA7510877C187cd92;
     
     function() payable public {
         if (msg.value > 0) {
