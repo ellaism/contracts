@@ -68,12 +68,12 @@ contract TipUser {
 
 	function() payable public {
 		if (msg.value == 0 && msg.sender == withdrawAddress) {
+			require(withdrawAddress != address(0));
 			withdrawAddress.transfer(address(this).balance);
 		}
 	}
 
 	function setWithdrawAddress(address _withdrawAddress) onlyDelegate public {
-		require(withdrawAddress == address(0));
 		withdrawAddress = _withdrawAddress;
 	}
 
