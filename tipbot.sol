@@ -74,6 +74,12 @@ contract TipUser {
 	}
 
 	function setWithdrawAddress(address _withdrawAddress) onlyDelegate public {
+		require(withdrawAddress == address(0));
+		withdrawAddress = _withdrawAddress;
+	}
+	
+	function changeWithdrawAddress(address _withdrawAddress) onlyDelegate public {
+		require(withdrawAddress != address(0));
 		withdrawAddress = _withdrawAddress;
 	}
 
